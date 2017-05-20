@@ -28,10 +28,13 @@ For example the first few are:
 
 The values in the data are the mean of the summary statistic.
 # What I did to the data
+
 1) I kept only the mean and standard deviation
 2) I updated the remaining variable names to a more readable format.
 3) I added the activity by adding the activity ID and them transforming that into the actual activity
 4) I summarized the data such that only the mean of all observations for a particular measurement, person, and activity are kept
+
+
 # Original data  Acceleration from Gyroscope and Accelerometer 
 
  561 Measurement variables
