@@ -1,4 +1,5 @@
 # CODEBOOK
+# NEW DATA - Summary of old data summary statistics (mean and standard deviation)
 #SubjectID - INTEGER- (1,30) : Identifies subject in study
 #Measurement -TEXT - 66 independent values: 5- words describing the measurement
  Word 1:  Identifies the instrument making the measurement  : values- Acclerometer or Gyroscope 
@@ -11,4 +12,8 @@
 "LAYING"  "SITTING"  "STANDING"   "WALKING" "WALKING_DOWNSTAIRS" "WALKING_UPSTAIRS"  
 
 The values in the data are the mean of the summary statistic.
+
+# Original data
+ 561 Measurements from 30 participants
+ Acceleration from Gyroscope and Accelerometer 
  
