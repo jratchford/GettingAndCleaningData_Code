@@ -20,12 +20,12 @@
 ###############################################
 ## FUNCTIONS TO HELP OUT
 
-mergeData<-function(aid="Activity", sid="SubjectID",  testSetNameX='test/X_test.txt'
-                     ,trainingSetNameX='train/X_train.txt'
-                     ,testSetNameY='test/y_test.txt'
-                     ,trainingSetNameY='train/y_train.txt'
-                     ,testSetNameS='test/subject_test.txt'
-                     ,trainingSetNameS='train/subject_train.txt')
+mergeData<-function(aid="Activity", sid="SubjectID",  testSetNameX='data/test/X_test.txt'
+                     ,trainingSetNameX='data/train/X_train.txt'
+                     ,testSetNameY='data/test/y_test.txt'
+                     ,trainingSetNameY='data/train/y_train.txt'
+                     ,testSetNameS='data/test/subject_test.txt'
+                     ,trainingSetNameS='data/train/subject_train.txt')
 {
   
   #1) Merges the training and the test sets to create one data set.
@@ -102,8 +102,8 @@ cleanf<-function(label1)
 #-------------------------
 # Preliminary work.
 #read in activity labels
-activityLabels<-read.csv('activity_labels.txt',sep=' ',skip=0, as.is=TRUE, header=FALSE,col.names=c('label','activity'))
-features<-read.csv('features.txt', sep=' ',header=FALSE,col.names=c('label','feature'),as.is=TRUE)
+activityLabels<-read.csv('data/activity_labels.txt',sep=' ',skip=0, as.is=TRUE, header=FALSE,col.names=c('label','activity'))
+features<-read.csv('data/features.txt', sep=' ',header=FALSE,col.names=c('label','feature'),as.is=TRUE)
 #############
 ## Define what you want to call these two rows
 aid<-"Activity"
@@ -145,4 +145,5 @@ library(dplyr)
 
 # Gather the data by measurement, value (ignore Activity and subjectID)
 tidy<-gather(data,key=Measurement, value=value, -get(aid),-get(sid)) %>% group_by_(aid,sid, 'Measurement') %>% summarise(mean=mean(value))%>% spread_(aid,'mean')
-write.table(tidy,file='my_clean_data.txt',sep=',')
+write.table(tidy,file='my_clean_data.txt',sep=',', row.names=FALSE)
+

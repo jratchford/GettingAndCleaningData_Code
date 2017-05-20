@@ -1,0 +1,14 @@
+# CODEBOOK
+#SubjectID - INTEGER- (1,30) : Identifies subject in study
+#Measurement -TEXT - 66 independent values: 5- words describing the measurement
+ Word 1:  Identifies the instrument making the measurement  : values- Acclerometer or Gyroscope 
+ Word 2:  Identifies the dimensions and domain of the measurement (frequency or time): values-  fouriertransform or time 
+ Word 3:  Identifies the measurement: Values -Body , BodyBody , Gravity ( with the addition of Jerk to indicate a Jerk quantity)
+ Word 4:  Identifies the summary statistic: values - mean or std
+ word 5:  Identifies the vector dimension (or magnitude): values - X, Y, Z or Magnitude
+ 
+ There are six columns for the six activity types:
+"LAYING"  "SITTING"  "STANDING"   "WALKING" "WALKING_DOWNSTAIRS" "WALKING_UPSTAIRS"  
+
+The values in the data are the mean of the summary statistic.
+ 

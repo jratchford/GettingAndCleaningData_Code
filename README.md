@@ -1,4 +1,4 @@
-#This is the last project for this class.
+# This is the last project for this class.
 I need to have a readme file!
 
 The code assumes the data is in a folder called "data" in the file you are running the script from
