@@ -144,6 +144,6 @@ library(tidyr)
 library(dplyr)
 
 # Gather the data by measurement, value (ignore Activity and subjectID)
-tidy<-gather(data,key=Measurement, value=value, -get(aid),-get(sid)) %>% group_by_(aid,sid, 'Measurement') %>% summarise(mean=mean(value))%>% spread_(aid,'mean')
+tidy<-gather(data,key=Measurement, value=value, -get(aid),-get(sid)) %>% group_by_(aid,sid, 'Measurement') %>% summarise(mean=mean(value))%>% spread_('Measurement','mean')
 write.table(tidy,file='my_clean_data.txt',sep=',', row.names=FALSE)
 
